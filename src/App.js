@@ -1,17 +1,20 @@
 import { useState } from 'react'
 
+// header component
 const Header = () => (
   <div>
     <h1>give feedback</h1>
   </div>
 )
 
+// Button component
 const Button = ({ onClick, text }) => (
   <>
     <button onClick={onClick}>{text}</button>
   </>
 )
 
+// Stats line component
 const StatisticLine = ({ text, value }) => {
   if (text === 'positive') {
     return (
@@ -29,6 +32,7 @@ const StatisticLine = ({ text, value }) => {
   )
 }
 
+// Stats block component
 const Statistics = (props) => {
   const good = props.bigProp.subs[0]
   const goodKey = Object.keys(good)[0]
